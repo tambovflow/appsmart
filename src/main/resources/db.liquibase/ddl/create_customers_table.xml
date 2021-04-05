@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <!--Imports-->
+    <include file="db.liquibase\ddl\liquibase_ddl_properties.xml"/>
+
+    <changeSet id="create_customer_table" author="Rafael">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="customers"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="customers">
+            <column name="id" type="${uuid_type}" valueComputed="${uuid_function}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="title" type="VARCHAR(255)"/>
+
+            <column name="is_deleted" type="BOOLEAN" defaultValueBoolean="false">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="modified_at" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+
+
+</databaseChangeLog>

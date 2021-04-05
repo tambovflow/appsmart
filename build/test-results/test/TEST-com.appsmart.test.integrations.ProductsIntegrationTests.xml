@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.appsmart.test.integrations.ProductsIntegrationTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-04-05T13:40:09" hostname="DESKTOP-TEUN6J2" time="0.457">
+  <properties/>
+  <testcase name="a_getCustomerForCustomerList" classname="com.appsmart.test.integrations.ProductsIntegrationTests" time="0.026"/>
+  <testcase name="b_createProjectsFromCustomer" classname="com.appsmart.test.integrations.ProductsIntegrationTests" time="0.26"/>
+  <testcase name="c_getAllCustomerProducts" classname="com.appsmart.test.integrations.ProductsIntegrationTests" time="0.049"/>
+  <testcase name="d_updateProductById" classname="com.appsmart.test.integrations.ProductsIntegrationTests" time="0.06"/>
+  <testcase name="zz_deleteProduct" classname="com.appsmart.test.integrations.ProductsIntegrationTests" time="0.054"/>
+  <system-out><![CDATA[2021-04-05 16:40:09.372  INFO 2472 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.appsmart.test.integrations.ProductsIntegrationTests], using SpringBootContextLoader
+2021-04-05 16:40:09.375  INFO 2472 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.appsmart.test.integrations.ProductsIntegrationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-04-05 16:40:09.375  INFO 2472 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.appsmart.test.integrations.ProductsIntegrationTests]: ProductsIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-04-05 16:40:09.390  INFO 2472 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.appsmart.test.ApplicationMain for test class com.appsmart.test.integrations.ProductsIntegrationTests
+2021-04-05 16:40:09.398  INFO 2472 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-04-05 16:40:09.400  INFO 2472 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7132927a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2c9321e4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3b9384fb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2d2816c2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@486ce05f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7dc574b7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5a5693a8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@37250026, org.springframework.test.context.event.EventPublishingTestExecutionListener@18646085, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4e52dff2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2077de43, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3fccce5b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@417f16f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5ce21350, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@42f95b49]
+2021-04-05 16:40:09.417  INFO 2472 --- [    Test worker] c.a.test.services.CustomerService        : get customers
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.is_deleted=? 
+    order by
+        customeren0_.created_at desc limit ?
+2021-04-05 16:40:09.606  INFO 2472 --- [    Test worker] c.appsmart.test.services.ProductService  : create product for customer
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.id=? 
+        and customeren0_.is_deleted=?
+Hibernate: 
+    insert 
+    into
+        public.products
+        (created_at, customer_id, description, is_deleted, modified_at, price, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /customers/da932efa-3715-493f-8f97-b955546a21a2/products
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"66"]
+             Body = {"title":"Any title","description":"Any description","price":10.0}
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.ProductsController
+           Method = com.appsmart.test.controllers.ProductsController#createProductForCustomer(UUID, ProductRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":"0256d1ec-59bf-4312-8530-732e300d244a","title":"Any title","description":"Any description","price":10.0,"is_deleted":false,"created_at":"2021-04-05T16:40:09.611","modified_at":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.640  INFO 2472 --- [    Test worker] c.appsmart.test.services.ProductService  : create product for customer
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.id=? 
+        and customeren0_.is_deleted=?
+Hibernate: 
+    insert 
+    into
+        public.products
+        (created_at, customer_id, description, is_deleted, modified_at, price, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /customers/da932efa-3715-493f-8f97-b955546a21a2/products
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"66"]
+             Body = {"title":"Any title","description":"Any description","price":10.0}
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.ProductsController
+           Method = com.appsmart.test.controllers.ProductsController#createProductForCustomer(UUID, ProductRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":"1fb5b7aa-e835-447c-91cd-bc45a32fe28c","title":"Any title","description":"Any description","price":10.0,"is_deleted":false,"created_at":"2021-04-05T16:40:09.646","modified_at":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.656  INFO 2472 --- [    Test worker] c.appsmart.test.services.ProductService  : create product for customer
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.id=? 
+        and customeren0_.is_deleted=?
+Hibernate: 
+    insert 
+    into
+        public.products
+        (created_at, customer_id, description, is_deleted, modified_at, price, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /customers/da932efa-3715-493f-8f97-b955546a21a2/products
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"66"]
+             Body = {"title":"Any title","description":"Any description","price":10.0}
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.ProductsController
+           Method = com.appsmart.test.controllers.ProductsController#createProductForCustomer(UUID, ProductRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":"a931ca02-64e5-4393-ac71-234dcb804a12","title":"Any title","description":"Any description","price":10.0,"is_deleted":false,"created_at":"2021-04-05T16:40:09.659","modified_at":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.666  INFO 2472 --- [    Test worker] c.appsmart.test.services.ProductService  : create product for customer
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.id=? 
+        and customeren0_.is_deleted=?
+Hibernate: 
+    insert 
+    into
+        public.products
+        (created_at, customer_id, description, is_deleted, modified_at, price, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /customers/da932efa-3715-493f-8f97-b955546a21a2/products
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"66"]
+             Body = {"title":"Any title","description":"Any description","price":10.0}
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.ProductsController
+           Method = com.appsmart.test.controllers.ProductsController#createProductForCustomer(UUID, ProductRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":"c4aa03aa-30ab-4fa7-86cd-fd3eb4c3b17d","title":"Any title","description":"Any description","price":10.0,"is_deleted":false,"created_at":"2021-04-05T16:40:09.669","modified_at":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.678  INFO 2472 --- [    Test worker] c.appsmart.test.services.ProductService  : create product for customer
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.id=? 
+        and customeren0_.is_deleted=?
+Hibernate: 
+    insert 
+    into
+        public.products
+        (created_at, customer_id, description, is_deleted, modified_at, price, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /customers/da932efa-3715-493f-8f97-b955546a21a2/products
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"66"]
+             Body = {"title":"Any title","description":"Any description","price":10.0}
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.ProductsController
+           Method = com.appsmart.test.controllers.ProductsController#createProductForCustomer(UUID, ProductRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":"073a67c1-9579-40d7-bb3e-babcfababba6","title":"Any title","description":"Any description","price":10.0,"is_deleted":false,"created_at":"2021-04-05T16:40:09.681","modified_at":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.709  INFO 2472 --- [    Test worker] c.appsmart.test.services.ProductService  : get products page by customer
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.id=? 
+        and customeren0_.is_deleted=?
+Hibernate: 
+    select
+        productent0_.id as id1_1_,
+        productent0_.created_at as created_2_1_,
+        productent0_.customer_id as customer8_1_,
+        productent0_.description as descript3_1_,
+        productent0_.is_deleted as is_delet4_1_,
+        productent0_.modified_at as modified5_1_,
+        productent0_.price as price6_1_,
+        productent0_.title as title7_1_ 
+    from
+        public.products productent0_ 
+    where
+        productent0_.customer_id=? 
+        and productent0_.is_deleted=? 
+    order by
+        productent0_.created_at desc limit ?
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customers/da932efa-3715-493f-8f97-b955546a21a2/products
+       Parameters = {page=[0], size=[100000]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.ProductsController
+           Method = com.appsmart.test.controllers.ProductsController#getProductsByCustomer(UUID, Integer, Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"content":[{"id":"073a67c1-9579-40d7-bb3e-babcfababba6","title":"Any title","description":"Any description","price":10.00,"is_deleted":false,"created_at":"2021-04-05T16:40:09.681","modified_at":null},{"id":"c4aa03aa-30ab-4fa7-86cd-fd3eb4c3b17d","title":"Any title","description":"Any description","price":10.00,"is_deleted":false,"created_at":"2021-04-05T16:40:09.669","modified_at":null},{"id":"a931ca02-64e5-4393-ac71-234dcb804a12","title":"Any title","description":"Any description","price":10.00,"is_deleted":false,"created_at":"2021-04-05T16:40:09.659","modified_at":null},{"id":"1fb5b7aa-e835-447c-91cd-bc45a32fe28c","title":"Any title","description":"Any description","price":10.00,"is_deleted":false,"created_at":"2021-04-05T16:40:09.646","modified_at":null},{"id":"0256d1ec-59bf-4312-8530-732e300d244a","title":"Any title","description":"Any description","price":10.00,"is_deleted":false,"created_at":"2021-04-05T16:40:09.611","modified_at":null}],"pageable":{"sort":{"sorted":true,"unsorted":false,"empty":false},"offset":0,"pageNumber":0,"pageSize":100000,"paged":true,"unpaged":false},"totalElements":5,"totalPages":1,"last":true,"size":100000,"number":0,"sort":{"sorted":true,"unsorted":false,"empty":false},"numberOfElements":5,"first":true,"empty":false}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.758  INFO 2472 --- [    Test worker] c.appsmart.test.services.ProductService  : update product by id
+Hibernate: 
+    select
+        productent0_.id as id1_1_,
+        productent0_.created_at as created_2_1_,
+        productent0_.customer_id as customer8_1_,
+        productent0_.description as descript3_1_,
+        productent0_.is_deleted as is_delet4_1_,
+        productent0_.modified_at as modified5_1_,
+        productent0_.price as price6_1_,
+        productent0_.title as title7_1_ 
+    from
+        public.products productent0_ 
+    where
+        productent0_.id=? 
+        and productent0_.is_deleted=?
+Hibernate: 
+    update
+        public.products 
+    set
+        description=?,
+        modified_at=?,
+        price=?,
+        title=? 
+    where
+        id=?
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /products/073a67c1-9579-40d7-bb3e-babcfababba6
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"70"]
+             Body = {"title":"New Title","description":"New Description","price":20.11111}
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.ProductsController
+           Method = com.appsmart.test.controllers.ProductsController#updateProductById(UUID, ProductRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":"073a67c1-9579-40d7-bb3e-babcfababba6","title":"New Title","description":"New Description","price":20.11111,"is_deleted":false,"created_at":"2021-04-05T16:40:09.681","modified_at":"2021-04-05T16:40:09.788"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.818  INFO 2472 --- [    Test worker] c.appsmart.test.services.ProductService  : delete product by id
+Hibernate: 
+    select
+        productent0_.id as id1_1_,
+        productent0_.created_at as created_2_1_,
+        productent0_.customer_id as customer8_1_,
+        productent0_.description as descript3_1_,
+        productent0_.is_deleted as is_delet4_1_,
+        productent0_.modified_at as modified5_1_,
+        productent0_.price as price6_1_,
+        productent0_.title as title7_1_ 
+    from
+        public.products productent0_ 
+    where
+        productent0_.id=? 
+        and productent0_.is_deleted=?
+Hibernate: 
+    update
+        public.products 
+    set
+        is_deleted=?,
+        modified_at=? 
+    where
+        id=?
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /products/073a67c1-9579-40d7-bb3e-babcfababba6
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.ProductsController
+           Method = com.appsmart.test.controllers.ProductsController#deleteProductById(UUID)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 204
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.841  INFO 2472 --- [    Test worker] c.appsmart.test.services.ProductService  : get product by id
+Hibernate: 
+    select
+        productent0_.id as id1_1_,
+        productent0_.created_at as created_2_1_,
+        productent0_.customer_id as customer8_1_,
+        productent0_.description as descript3_1_,
+        productent0_.is_deleted as is_delet4_1_,
+        productent0_.modified_at as modified5_1_,
+        productent0_.price as price6_1_,
+        productent0_.title as title7_1_ 
+    from
+        public.products productent0_ 
+    where
+        productent0_.id=? 
+        and productent0_.is_deleted=?
+2021-04-05 16:40:09.847  INFO 2472 --- [    Test worker] c.appsmart.test.services.ProductService  : get products page by customer
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.id=? 
+        and customeren0_.is_deleted=?
+Hibernate: 
+    select
+        productent0_.id as id1_1_,
+        productent0_.created_at as created_2_1_,
+        productent0_.customer_id as customer8_1_,
+        productent0_.description as descript3_1_,
+        productent0_.is_deleted as is_delet4_1_,
+        productent0_.modified_at as modified5_1_,
+        productent0_.price as price6_1_,
+        productent0_.title as title7_1_ 
+    from
+        public.products productent0_ 
+    where
+        productent0_.customer_id=? 
+        and productent0_.is_deleted=? 
+    order by
+        productent0_.created_at desc limit ?
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customers/da932efa-3715-493f-8f97-b955546a21a2/products
+       Parameters = {page=[0], size=[100000]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.ProductsController
+           Method = com.appsmart.test.controllers.ProductsController#getProductsByCustomer(UUID, Integer, Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"content":[{"id":"c4aa03aa-30ab-4fa7-86cd-fd3eb4c3b17d","title":"Any title","description":"Any description","price":10.00,"is_deleted":false,"created_at":"2021-04-05T16:40:09.669","modified_at":null},{"id":"a931ca02-64e5-4393-ac71-234dcb804a12","title":"Any title","description":"Any description","price":10.00,"is_deleted":false,"created_at":"2021-04-05T16:40:09.659","modified_at":null},{"id":"1fb5b7aa-e835-447c-91cd-bc45a32fe28c","title":"Any title","description":"Any description","price":10.00,"is_deleted":false,"created_at":"2021-04-05T16:40:09.646","modified_at":null},{"id":"0256d1ec-59bf-4312-8530-732e300d244a","title":"Any title","description":"Any description","price":10.00,"is_deleted":false,"created_at":"2021-04-05T16:40:09.611","modified_at":null}],"pageable":{"sort":{"sorted":true,"unsorted":false,"empty":false},"offset":0,"pageNumber":0,"pageSize":100000,"paged":true,"unpaged":false},"totalElements":4,"totalPages":1,"last":true,"size":100000,"number":0,"sort":{"sorted":true,"unsorted":false,"empty":false},"numberOfElements":4,"first":true,"empty":false}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

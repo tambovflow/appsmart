@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.appsmart.test.integrations.CustomersIntegrationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.appsmart.test.integrations.CustomersIntegrationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.appsmart.test.integrations.html">com.appsmart.test.integrations</a> &gt; CustomersIntegrationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.475s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">a_createCustomer</td>
+<td class="success">0.843s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">b_getAllCustomers</td>
+<td class="success">0.476s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">c_getCustomerById</td>
+<td class="success">0.040s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">ca_getCustomerByIdAndReturn404</td>
+<td class="success">0.034s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">cb_getCustomerByWrongIdAndReturn400</td>
+<td class="success">0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">d_updateCustomer</td>
+<td class="success">0.063s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>16:39:51.439 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:51.461 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+16:39:51.481 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+16:39:51.571 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.appsmart.test.integrations.CustomersIntegrationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+16:39:51.603 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.appsmart.test.integrations.CustomersIntegrationTests], using SpringBootContextLoader
+16:39:51.616 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.appsmart.test.integrations.CustomersIntegrationTests]: class path resource [com/appsmart/test/integrations/CustomersIntegrationTests-context.xml] does not exist
+16:39:51.617 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.appsmart.test.integrations.CustomersIntegrationTests]: class path resource [com/appsmart/test/integrations/CustomersIntegrationTestsContext.groovy] does not exist
+16:39:51.618 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.appsmart.test.integrations.CustomersIntegrationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:39:51.620 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.appsmart.test.integrations.CustomersIntegrationTests]: CustomersIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:39:51.779 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:51.955 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\Admin\Documents\repositories\com.appsmart.test\build\classes\java\main\com\appsmart\test\ApplicationMain.class]
+16:39:51.958 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.appsmart.test.ApplicationMain for test class com.appsmart.test.integrations.CustomersIntegrationTests
+16:39:52.230 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.appsmart.test.integrations.CustomersIntegrationTests]: using defaults.
+16:39:52.231 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+16:39:52.291 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6eee0ab1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@54a4e7cc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@19a5f511, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@650a0274, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7baf27e6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@84625d8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e7d44bc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@bd1e8a5, org.springframework.test.context.event.EventPublishingTestExecutionListener@9c36e2e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3012f22b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@641e0831, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@600e50d7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@722ee0e6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@550ac722, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@41c10232]
+16:39:52.297 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.300 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.304 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.304 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.309 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.310 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.313 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.314 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.315 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.316 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.335 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@73215252 testClass = CustomersIntegrationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@62baae47 testClass = CustomersIntegrationTests, locations = '{}', classes = '{class com.appsmart.test.ApplicationMain}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@46e23609, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@369af0d1, [ImportsContextCustomizer@51cbac92 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51dac86a, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5141430e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2f2e5526, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2041fe5c], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+16:39:52.341 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.341 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.appsmart.test.integrations.CustomersIntegrationTests]
+16:39:52.415 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.4)
+
+2021-04-05 16:39:53.233  INFO 2472 --- [    Test worker] c.a.t.i.CustomersIntegrationTests        : Starting CustomersIntegrationTests using Java 1.8.0_212 on DESKTOP-TEUN6J2 with PID 2472 (started by Admin in C:\Users\Admin\Documents\repositories\com.appsmart.test)
+2021-04-05 16:39:53.234  INFO 2472 --- [    Test worker] c.a.t.i.CustomersIntegrationTests        : The following profiles are active: dev
+2021-04-05 16:39:54.747  INFO 2472 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-05 16:39:54.918  INFO 2472 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 2 JPA repository interfaces.
+2021-04-05 16:39:56.160  INFO 2472 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 16:39:56.454  INFO 2472 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 16:39:57.290  INFO 2472 --- [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
+2021-04-05 16:39:57.494  INFO 2472 --- [    Test worker] liquibase.resource                       : Configured classpath location file:/C:/Users/Admin/Documents/repositories/com.appsmart.test/build/resources/test does not exist
+2021-04-05 16:39:58.247  INFO 2472 --- [    Test worker] liquibase.resource                       : Configured classpath location file:/C:/Users/Admin/Documents/repositories/com.appsmart.test/build/resources/test does not exist
+2021-04-05 16:39:58.793  INFO 2472 --- [    Test worker] liquibase.resource                       : Configured classpath location file:/C:/Users/Admin/Documents/repositories/com.appsmart.test/build/resources/test does not exist
+2021-04-05 16:39:59.879  INFO 2472 --- [    Test worker] liquibase.resource                       : Configured classpath location file:/C:/Users/Admin/Documents/repositories/com.appsmart.test/build/resources/test does not exist
+2021-04-05 16:40:00.498  INFO 2472 --- [    Test worker] liquibase.resource                       : Configured classpath location file:/C:/Users/Admin/Documents/repositories/com.appsmart.test/build/resources/test does not exist
+2021-04-05 16:40:01.098  INFO 2472 --- [    Test worker] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
+2021-04-05 16:40:01.120  INFO 2472 --- [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2021-04-05 16:40:01.300  INFO 2472 --- [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2021-04-05 16:40:01.306  INFO 2472 --- [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
+Skipping auto-registration
+2021-04-05 16:40:01.308  WARN 2472 --- [    Test worker] liquibase.hub                            : Skipping auto-registration
+2021-04-05 16:40:01.385  INFO 2472 --- [    Test worker] liquibase.changelog                      : Table customers created
+2021-04-05 16:40:01.387  INFO 2472 --- [    Test worker] liquibase.changelog                      : ChangeSet db.liquibase/ddl/create_customers_table.xml::create_customer_table::Rafael ran successfully in 70ms
+2021-04-05 16:40:01.449  INFO 2472 --- [    Test worker] liquibase.changelog                      : Table products created
+2021-04-05 16:40:01.450  INFO 2472 --- [    Test worker] liquibase.changelog                      : ChangeSet db.liquibase/ddl/create_products_table.xml::create_products_table::Rafael ran successfully in 55ms
+2021-04-05 16:40:01.457  INFO 2472 --- [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2021-04-05 16:40:01.744  INFO 2472 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-05 16:40:01.916  INFO 2472 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-05 16:40:02.319  INFO 2472 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-05 16:40:02.689  INFO 2472 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-05 16:40:04.568  INFO 2472 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-05 16:40:04.597  INFO 2472 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-05 16:40:06.207  WARN 2472 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-05 16:40:06.716  INFO 2472 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 16:40:07.780  INFO 2472 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-04-05 16:40:07.780  INFO 2472 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-04-05 16:40:07.782  INFO 2472 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2021-04-05 16:40:07.814  INFO 2472 --- [    Test worker] c.a.t.i.CustomersIntegrationTests        : Started CustomersIntegrationTests in 15.384 seconds (JVM running for 17.921)
+2021-04-05 16:40:08.325  INFO 2472 --- [    Test worker] c.a.test.services.CustomerService        : create new customer
+Hibernate: 
+    insert 
+    into
+        public.customers
+        (created_at, is_deleted, modified_at, title, id) 
+    values
+        (?, ?, ?, ?, ?)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /customers
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Content-Length:&quot;22&quot;]
+             Body = {&quot;title&quot;:&quot;Test Title&quot;}
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.CustomersController
+           Method = com.appsmart.test.controllers.CustomersController#createCustomer(CustomerRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;id&quot;:&quot;da932efa-3715-493f-8f97-b955546a21a2&quot;,&quot;title&quot;:&quot;Test Title&quot;,&quot;is_deleted&quot;:false,&quot;created_at&quot;:&quot;2021-04-05T16:40:08.325&quot;,&quot;modified_at&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:08.719  INFO 2472 --- [    Test worker] c.a.test.services.CustomerService        : get customers
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.is_deleted=? 
+    order by
+        customeren0_.created_at desc limit ?
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customers
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.CustomersController
+           Method = com.appsmart.test.controllers.CustomersController#getCustomers(Integer, Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;content&quot;:[{&quot;id&quot;:&quot;da932efa-3715-493f-8f97-b955546a21a2&quot;,&quot;title&quot;:&quot;Test Title&quot;,&quot;is_deleted&quot;:false,&quot;created_at&quot;:&quot;2021-04-05T16:40:08.325&quot;,&quot;modified_at&quot;:null}],&quot;pageable&quot;:{&quot;sort&quot;:{&quot;sorted&quot;:true,&quot;unsorted&quot;:false,&quot;empty&quot;:false},&quot;offset&quot;:0,&quot;pageNumber&quot;:0,&quot;pageSize&quot;:10,&quot;paged&quot;:true,&quot;unpaged&quot;:false},&quot;totalElements&quot;:1,&quot;totalPages&quot;:1,&quot;last&quot;:true,&quot;size&quot;:10,&quot;number&quot;:0,&quot;sort&quot;:{&quot;sorted&quot;:true,&quot;unsorted&quot;:false,&quot;empty&quot;:false},&quot;numberOfElements&quot;:1,&quot;first&quot;:true,&quot;empty&quot;:false}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.177  INFO 2472 --- [    Test worker] c.a.t.i.CustomersIntegrationTests        : [CustomerDto(id=da932efa-3715-493f-8f97-b955546a21a2, title=Test Title, isDeleted=false, createdAt=2021-04-05T16:40:08.325, modifiedAt=null)]
+2021-04-05 16:40:09.192  INFO 2472 --- [    Test worker] c.a.test.services.CustomerService        : get customer by id
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.id=? 
+        and customeren0_.is_deleted=?
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customers/da932efa-3715-493f-8f97-b955546a21a2
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.CustomersController
+           Method = com.appsmart.test.controllers.CustomersController#getCustomerById(UUID)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;id&quot;:&quot;da932efa-3715-493f-8f97-b955546a21a2&quot;,&quot;title&quot;:&quot;Test Title&quot;,&quot;is_deleted&quot;:false,&quot;created_at&quot;:&quot;2021-04-05T16:40:08.325&quot;,&quot;modified_at&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.230  INFO 2472 --- [    Test worker] c.a.test.services.CustomerService        : get customer by id
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.id=? 
+        and customeren0_.is_deleted=?
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customers/39fc87bd-b75b-44fc-b9d5-56b828c8e949
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.CustomersController
+           Method = com.appsmart.test.controllers.CustomersController#getCustomerById(UUID)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = Customer not found
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.268  WARN 2472 --- [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: wrong_id]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customers/wrong_id
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.appsmart.test.controllers.CustomersController
+           Method = com.appsmart.test.controllers.CustomersController#getCustomerById(UUID)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.method.annotation.MethodArgumentTypeMismatchException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-04-05 16:40:09.289  INFO 2472 --- [    Test worker] c.a.test.services.CustomerService        : get customer by id
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.id=? 
+        and customeren0_.is_deleted=?
+2021-04-05 16:40:09.305  INFO 2472 --- [    Test worker] c.a.test.services.CustomerService        : update customer by id
+Hibernate: 
+    select
+        customeren0_.id as id1_0_,
+        customeren0_.created_at as created_2_0_,
+        customeren0_.is_deleted as is_delet3_0_,
+        customeren0_.modified_at as modified4_0_,
+        customeren0_.title as title5_0_ 
+    from
+        public.customers customeren0_ 
+    where
+        customeren0_.id=? 
+        and customeren0_.is_deleted=?
+Hibernate: 
+    update
+        public.customers 
+    set
+        modified_at=?,
+        title=? 
+    where
+        id=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.3</a> at Apr 5, 2021 4:40:10 PM</p>
+</div>
+</div>
+</body>
+</html>
